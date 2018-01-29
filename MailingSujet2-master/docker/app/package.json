@@ -1,0 +1,14 @@
+{
+    "name": "serveur_mailling",
+    "version": "1.0.0",
+    "description": "Serveur projet mailling",
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon server.js",
+        "test": "console.log('It's work)"
+    },
+    "dependencies": {
+        "express": "^4.15.2",
+        "nodemon": "^1.11.0"
+    }
+}

@@ -1,0 +1,10 @@
+pipeline {
+  agent any
+  stages {
+    stage('YOURSTAGE') {
+      steps {
+        echo 'Lapin cerise'
+      }
+    }
+  }
+}

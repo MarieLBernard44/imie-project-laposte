@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='language' content='fr-FR' />
+    <link rel="icon" type="image/png" href="icon.png" />
+    <title>Mailing</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='./styles/style.css'>
+    <script src="./app.bundle.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="" class="brand-logo">Mailing</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a id="connexion" href="#">Connexion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="presentation">
+        <h2>Liste des mailings</h2>
+        <p>Voici la liste des mailings, vous pouvez en ajouter, les modifier ou les supprimer</p>
+        <a id="ajouter" class="waves-effect waves-light btn" href="#">Ajouter</a>
+    </div>
+
+    <hf class="separateur"></hf>
+    <div class="liste">
+        <table class="responsive-table bordered highlight">
+            <thead>
+                <tr>
+                    <th>Objet</th>
+                    <th>Date</th>
+                    <th>Utilitaires</th>
+                </tr>
+            </thead>
+            <tbody id="listeMailing">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modalAjout" class="modal">
+        <div class="modal-content">
+            <h4 id="titreAjout">Ajout d'un mailing</h4>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="objet" type="text" class="">
+                        <label for="objet">Objet</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="dateEnvoie" type="text" class="datepicker">
+                        <label for="dateEnvoie">Date d'envoie</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="contenu" class="materialize-textarea"></textarea>
+                        <label for="contenu">Contenu</label>
+                    </div>
+                </div>
+            </form>
+            <div class="div-center">
+                <a id="ajouterAjouter" class="waves-effect waves-light btn" href="#">Ajouter</a>
+                <a id="ajouterAnnuler" class="waves-effect waves-light btn" href="#">Annuler</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalModifier" class="modal">
+        <div class="modal-content">
+            <h4 id="titreAjout">Modification d'un mailing</h4>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="objetModifier" type="text" class="">
+                        <label for="objetModifier">Objet</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="dateEnvoieModifier" type="text" class="datepicker">
+                        <label for="dateEnvoieModifier">Date d'envoie</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="contenuModifier" class="materialize-textarea"></textarea>
+                        <label for="contenuModifier">Contenu</label>
+                    </div>
+                </div>
+            </form>
+            <div class="div-center">
+                <a id="modifierModifier" class="waves-effect waves-light btn" href="#">Modifier</a>
+                <a id="modifierAnnuler" class="waves-effect waves-light btn" href="#">Annuler</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h4>Connexion</h4>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="username" type="text" class="validate">
+                        <label for="username">Identifiant</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Mot de passe</label>
+                    </div>
+                </div>
+            </form>
+            <div class="div-center">
+                <a id="tryConnexion" class="waves-effect waves-light btn" href="#">Connexion</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

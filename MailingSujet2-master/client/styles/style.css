@@ -1,0 +1,28 @@
+.div-center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.brand-logo {
+    margin-left: 5px;
+}
+
+.erreur {
+    background-color: #F44336
+}
+
+.succes {
+    background-color: #CDDC39;
+}
+
+.presentation{
+    margin: 20px;
+}
+
+.liste{
+    margin: 20px;
+}
+
+.btn{
+    margin-right: 20px;
+}

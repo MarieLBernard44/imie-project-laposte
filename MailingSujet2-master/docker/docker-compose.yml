@@ -1,0 +1,27 @@
+version: '2'
+services:
+    mysql-dev:
+
+      image: mysql:8.0.2
+      environment:
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: bonjour
+      volumes:
+        - db_data:/var/lib/mysql
+      restart: always
+      ports:
+        - "3308:3306"
+    node:
+      depends_on:
+      - mysql-dev
+      image: 'node:8'
+      user: 'node'
+      working_dir: /home/node/app
+      volumes:
+      - ./app:/home/node/app
+      command: bash -c 'ls -al && npm install && npm start'
+      ports:
+      - '8080:8080'
+      restart: always
+volumes:
+    db_data:
