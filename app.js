@@ -1,17 +1,18 @@
 var express = require('express');
 var app = express();
 var dbClient = require('mariasql');
+import config from './config.js';
 
 var db = new dbClient();
 db.connect
 ({
-    host: '127.0.0.1',
-    user: 'homestead',
-    password: 'secret'
+    host: config.mariadb_host,
+    user: config.mariadb_user,
+    password: config.mariadb_password
 });
 
 app.get('/', function (req, res) {
-//    resSql = db.query('select * from deliveries');
+//    resSql = db.query('select * from deliveries'); // db = scan_tracker
     res.send('resSql');
 });
 
