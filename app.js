@@ -1,9 +1,9 @@
-var express = require('express');
-var app = express();
-var dbClient = require('mariasql');
-import config from './config.js';
+const express = require('express');
+const app = express();
+const dbClient = require('mariasql');
+const config = require('./config.js');
 
-var db = new dbClient();
+const db = new dbClient();
 db.connect
 ({
     host: config.mariadb_host,
