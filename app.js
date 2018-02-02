@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const dbClient = require('mariasql');
-const config = require('./config.js');
+const config = require('./config/config.js');
 
 const db = new dbClient();
 db.connect
