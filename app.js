@@ -21,6 +21,6 @@ app.post('/:id', function (req, res) {
     res.send(req.params.id);
 });
 
-app.listen(8080, function () {
+app.listen(config.app_port, function () {
   console.log('App is running.');
 });
